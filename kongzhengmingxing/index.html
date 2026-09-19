@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="空政明星团官方网站，提供空军政治工作部文工团演员、艺术家详细介绍、经典作品回顾、最新演出资讯及艺术团风采展示。">
+    <meta name="keywords" content="空政明星团,空军文工团,空政文工团,空政演员,空军文工团官网,文工团">
+    <title>空政明星团-空军政治工作部文工团官方主页</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a3c5e; /* 军队深蓝 */
+            --accent-color: #c8102e; /* 红色点缀 */
+            --bg-light: #f4f7f9;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --white: #ffffff;
+            --border-radius: 4px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(26, 60, 94, 0.7), rgba(26, 60, 94, 0.7)), url('https://picsum.photos/seed/airforce/1920/600') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-color);
+            color: var(--white);
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #a00d26;
+        }
+
+        /* Intro Section */
+        .intro {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .intro-text p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .intro-image img {
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Artists Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+        }
+
+        .artists {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .artist-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .artist-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .artist-img {
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .artist-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .artist-card:hover .artist-img img {
+            transform: scale(1.05);
+        }
+
+        .artist-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .artist-info h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--text-main);
+        }
+
+        .artist-info .role {
+            font-size: 14px;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Works Section */
+        .works {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .work-item {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            height: 200px;
+            cursor: pointer;
+        }
+
+        .work-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s;
+        }
+
+        .work-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: var(--white);
+        }
+
+        .work-overlay h4 {
+            font-size: 16px;
+        }
+
+        .work-overlay span {
+            font-size: 12px;
+            color: #ddd;
+        }
+
+        /* News Section */
+        .news {
+            padding: 80px 0;
+            background-color: #f0f4f8;
+        }
+
+        .news-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .news-list {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+        }
+
+        .news-item {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .news-date {
+            font-size: 14px;
+            color: var(--text-secondary);
+            width: 100px;
+            text-align: right;
+        }
+
+        .news-content h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .news-content h4:hover {
+            color: var(--primary-color);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-widget {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+        }
+
+        .sidebar-widget h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag-cloud a {
+            font-size: 12px;
+            background: #eee;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+
+        .tag-cloud a:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 14px;
+            color: #999;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .intro-grid, .works-grid, .news-container, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .intro-grid {
+                gap: 30px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none; /* 简化移动端处理 */
+            }
+            
+            .header-inner {
+                justify-content: center;
+            }
+
+            .works-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>★</span> 空政明星团
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">艺术名家</a></li>
+                    <li><a href="#">经典剧目</a></li>
+                    <li><a href="#">新闻资讯</a></li>
+                    <li><a href="#">艺术团简介</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>空军政治工作部文工团</h1>
+            <p>弘扬主旋律，传播正能量，打造新时代强军文化先锋</p>
+            <a href="#intro" class="btn">了解我们</a>
+        </div>
+    </section>
+
+    <section id="intro" class="intro">
+        <div class="container intro-grid">
+            <div class="intro-image">
+                <img src="https://picsum.photos/seed/airforce_concert/600/400" alt="空政明星团演出">
+            </div>
+            <div class="intro-text">
+                <h2>铁血铸军魂，丹心谱华章</h2>
+                <p>空军政治工作部文工团（简称“空政文工团”）是中国人民解放军空军所属的一支专业文艺团体。自成立以来，文工团始终坚持以习近平强军思想为指引，秉承“为兵服务、为战斗力服务”的根本宗旨，创作了一大批反映空军官兵战斗生活、展现新时代空军风采的优秀文艺作品。</p>
+                <p>团队汇聚了众多在声乐、舞蹈、戏剧、器乐等领域享有盛誉的艺术家，多次参加全军及全国性重大文艺演出，是全军文化建设的重要力量。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="artists">
+        <div class="container">
+            <div class="section-title">
+                <h2>艺术名家</h2>
+                <p>德艺双馨的艺术家风采</p>
+            </div>
+            <div class="artist-grid">
+                <article class="artist-card">
+                    <div class="artist-img">
+                        <img src="https://picsum.photos/seed/singer1/400/500" alt="歌唱家李双江">
+                    </div>
+                    <div class="artist-info">
+                        <h3>李双江</h3>
+                        <span class="role">著名歌唱家</span>
+                    </div>
+                </article>
+                <article class="artist-card">
+                    <div class="artist-img">
+                        <img src="https://picsum.photos/seed/singer2/400/500" alt="歌唱家阎维文">
+                    </div>
+                    <div class="artist-info">
+                        <h3>阎维文</h3>
+                        <span class="role">著名歌唱家</span>
+                    </div>
+                </article>
+                <article class="artist-card">
+                    <div class="artist-img">
+                        <img src="https://picsum.photos/seed/singer3/400/500" alt="歌唱家董文华">
+                    </div>
+                    <div class="artist-info">
+                        <h3>董文华</h3>
+                        <span class="role">著名歌唱家</span>
+                    </div>
+                </article>
+                <article class="artist-card">
+                    <div class="artist-img">
+                        <img src="https://picsum.photos/seed/singer4/400/500" alt="歌唱家刘斌">
+                    </div>
+                    <div class="artist-info">
+                        <h3>刘斌</h3>
+                        <span class="role">著名歌唱家</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="works">
+        <div class="container">
+            <div class="section-title">
+                <h2>经典剧目</h2>
+                <p>传唱不衰的红色经典</p>
+            </div>
+            <div class="works-grid">
+                <div class="work-item">
+                    <img src="https://picsum.photos/seed/opera1/400/300" alt="歌剧《江姐》">
+                    <div class="work-overlay">
+                        <h4>歌剧《江姐》</h4>
+                        <span>经典红色剧目</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <img src="https://picsum.photos/seed/opera2/400/300" alt="音乐剧《长征》">
+                    <div class="work-overlay">
+                        <h4>音乐剧《长征》</h4>
+                        <span>史诗级舞台巨作</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <img src="https://picsum.photos/seed/opera3/400/300" alt="歌舞《兵》">
+                    <div class="work-overlay">
+                        <h4>歌舞《兵》</h4>
+                        <span>展现军人风采</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="container news-container">
+            <div class="news-list">
+                <div class="section-title" style="text-align: left; margin-bottom: 30px;">
+                    <h2>最新动态</h2>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">2023-10-15</div>
+                    <div class="news-content">
+                        <h4>空政文工团赴边疆部队开展慰问演出活动</h4>
+                        <p style="font-size: 14px; color: #666;">为深入贯彻落实习近平强军思想，丰富基层官兵精神文化生活，我团近期组织艺术家深入高原哨所，为官兵们送去精彩的文艺节目。</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">2023-09-28</div>
+                    <div class="news-content">
+                        <h4>庆祝建国74周年“强军战歌”专场音乐会</h4>
+                        <p style="font-size: 14px; color: #666;">在国庆来临之际，空政文工团在人民大会堂举办专场音乐会，以激昂的旋律致敬祖国，献礼华诞。</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">2023-09-10</div>
+                    <div class="news-content">
+                        <h4>著名歌唱家阎维文举办个人独唱音乐会</h4>
+                        <p style="font-size: 14px; color: #666;">阎维文携最新原创作品，在首都体育馆开启巡回演出，用歌声讲述新时代的奋斗故事。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>热门标签</h3>
+                    <div class="tag-cloud">
+                        <a href="#">军旅歌曲</a>
+                        <a href="#">空政晚会</a>
+                        <a href="#">艺术家专访</a>
+                        <a href="#">红色经典</a>
+                        <a href="#">强军文化</a>
+                        <a href="#">空军历史</a>
+                    </div>
+                </div>
+                <div class="sidebar-widget">
+                    <h3>关于文工团</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.8;">
+                        空军政治工作部文工团成立于1949年，是一支具有光荣传统和辉煌业绩的专业文艺团体。
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">文工团简介</a></li>
+                        <li><a href="#">组织架构</a></li>
+                        <li><a href="#">领导成员</a></li>
+                        <li><a href="#">历任领导</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>艺术名家</h4>
+                    <ul>
+                        <li><a href="#">歌唱家</a></li>
+                        <li><a href="#">舞蹈家</a></li>
+                        <li><a href="#">演员</a></li>
+                        <li><a href="#">演奏家</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>剧目作品</h4>
+                    <ul>
+                        <li><a href="#">歌剧</a></li>
+                        <li><a href="#">音乐剧</a></li>
+                        <li><a href="#">舞蹈</a></li>
+                        <li><a href="#">歌曲</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>地址：北京市海淀区复兴路</li>
+                        <li>电话：010-12345678</li>
+                        <li>邮箱：contact@kzwt.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 空军政治工作部文工团 版权所有 | 仅供展示使用</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
