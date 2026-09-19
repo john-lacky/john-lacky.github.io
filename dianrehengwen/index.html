@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电热恒温箱-专业实验室设备与科研应用指南</title>
+    <meta name="description" content="本站提供电热恒温箱的专业选购指南、技术参数解析、实验室应用场景及维护保养知识，帮助科研人员与工业用户高效选择适合的恒温培养设备。">
+    <meta name="keywords" content="电热恒温箱, 恒温培养箱, 实验室设备, 生物制药, 烘干设备">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c5282;
+            --primary-light: #ebf8ff;
+            --secondary-color: #2d3748;
+            --accent-color: #3182ce;
+            --text-main: #1a202c;
+            --text-secondary: #4a5568;
+            --bg-body: #f7fafc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo svg {
+            width: 32px;
+            height: 32px;
+            fill: currentColor;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-top: -40px;
+            margin-bottom: 60px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            margin-top: 5px;
+        }
+
+        /* Card Styles */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img {
+            height: 180px;
+            background-color: #edf2f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a0aec0;
+            font-size: 3rem;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card-text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #718096;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #f8fafc;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-widget {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        .check-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--bg-card);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: var(--primary-light);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid transparent;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            border-top-color: var(--border-color);
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        .icon-plus {
+            transition: transform 0.2s;
+        }
+
+        .faq-item.active .icon-plus {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #cbd5e0;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    <path d="M7 19h10v2H7z" opacity=".3"/>
+                </svg>
+                实验设备指南
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#products">产品系列</a></li>
+                    <li><a href="#guide">选购指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-btn">联系厂家</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>电热恒温箱</h1>
+                <p>精准温控，稳定可靠。专为微生物培养、干燥、烘焙及化学实验设计的高性能恒温设备。</p>
+                <div class="hero-tags">
+                    <span class="tag">微生物培养</span>
+                    <span class="tag">干燥灭菌</span>
+                    <span class="tag">恒温烘焙</span>
+                    <span class="tag">精密控温</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container content-grid">
+            <!-- Left Column -->
+            <div class="main-column">
+                <!-- Products Section -->
+                <section id="products">
+                    <div class="section-header">
+                        <h2>主流电热恒温箱产品系列</h2>
+                        <p>根据不同实验需求，提供多规格的恒温解决方案</p>
+                    </div>
+                    <div class="card-grid">
+                        <article class="card">
+                            <div class="card-img">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
+                                    <path d="M7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z" opacity=".3"/>
+                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
+                                </svg>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">普通型电热恒温箱</h3>
+                                <p class="card-text">无强制风循环，适合干燥、保存标本及一般性恒温实验。结构简单，性价比高。</p>
+                                <div class="card-meta">
+                                    <span>控温范围：室温~250℃</span>
+                                    <span>容量：40L-300L</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-img">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                </svg>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">鼓风恒温干燥箱</h3>
+                                <p class="card-text">配备鼓风装置，箱内空气强制对流，温度均匀性更好，适合对温度均匀性要求高的实验。</p>
+                                <div class="card-meta">
+                                    <span>控温范围：室温~300℃</span>
+                                    <span>精度：±1.0℃</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-img">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                                </svg>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">生化培养箱</h3>
+                                <p class="card-text">具备光照、震动功能，专为微生物培养设计，部分型号支持CO2培养。</p>
+                                <div class="card-meta">
+                                    <span>控温范围：5℃~60℃</span>
+                                    <span>功能：光照/震动</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Guide Section -->
+                <section id="guide">
+                    <div class="section-header">
+                        <h2>选购与使用指南</h2>
+                        <p>如何根据实验需求选择合适的电热恒温箱？</p>
+                    </div>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>应用场景</th>
+                                <th>推荐类型</th>
+                                <th>注意事项</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>一般干燥与灭菌</strong><br>如烘干玻璃器皿、滤纸等</td>
+                                <td>普通型电热恒温箱 或 鼓风恒温干燥箱</td>
+                                <td>注意高温对电子元件的影响，避免放入易燃易爆物品。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>微生物培养</strong><br>如细菌、霉菌培养</td>
+                                <td>生化培养箱</td>
+                                <td>需关注湿度控制，部分细菌培养需配备CO2调节系统。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>化学试剂保存</strong><br>如挥发性试剂、精密仪器</td>
+                                <td>普通型电热恒温箱</td>
+                                <td>建议使用双层玻璃门，避免频繁开关箱门导致温度波动。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>高分子材料老化实验</strong></td>
+                                <td>鼓风恒温干燥箱</td>
+                                <td>需定期校准温度传感器，确保老化测试数据的准确性。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <aside>
+                <div class="sidebar-widget">
+                    <h3>选购核心参数</h3>
+                    <ul class="check-list">
+                        <li><strong>控温范围：</strong>明确实验所需的最低和最高温度。</li>
+                        <li><strong>控温精度：</strong>精密实验建议选择±0.5℃或±1.0℃精度的设备。</li>
+                        <li><strong>容积选择：</strong>根据样品数量和大小，留出20%的空间余量。</li>
+                        <li><strong>开门方式：</strong>观察窗大小及门锁设计，便于操作与安全。</li>
+                        <li><strong>材质要求：</strong>内胆材质通常为镜面不锈钢，耐腐蚀。</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>维护保养建议</h3>
+                    <ul class="check-list">
+                        <li>定期清理散热网，防止堵塞。</li>
+                        <li>使用完毕后待箱内温度降至室温再关机。</li>
+                        <li>避免将腐蚀性气体放入箱内。</li>
+                        <li>定期校准温度计，确保数据准确。</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget" id="contact">
+                    <h3>联系技术支持</h3>
+                    <p style="margin-bottom: 15px; font-size: 0.9rem; color: #666;">如需了解更多型号详情或获取报价，请填写下方信息。</p>
+                    <form onsubmit="event.preventDefault(); alert('感谢您的留言，我们将尽快联系您。');" style="display: flex; flex-direction: column; gap: 10px;">
+                        <input type="text" placeholder="您的姓名" required style="padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                        <input type="email" placeholder="电子邮箱" required style="padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                        <button type="submit" class="cta-btn" style="border: none; cursor: pointer; width: 100%;">发送咨询</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container">
+            <div class="section-header">
+                <h2>常见问题解答</h2>
+                <p>关于电热恒温箱的使用与维护</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>电热恒温箱和普通烤箱有什么区别？</span>
+                        <span class="icon-plus">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>电热恒温箱通常指用于实验室环境的恒温设备，强调温度的均匀性和稳定性，常用于生物、化学实验。而普通烤箱多用于食品加热或工业烘干，温度控制范围更广，但精度要求相对较低。实验室用的恒温箱通常带有观察窗、门锁和防爆功能。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>为什么箱内温度显示正常，但实际温度偏差较大？</span>
+                        <span class="icon-plus">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>这可能是由于传感器老化或未经过校准造成的。建议每隔一段时间使用标准温度计对恒温箱进行校准。此外，频繁开关箱门、放置物品过满导致空气不流通或环境温度过低（如放在冷库旁）也会影响实际温度。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>使用鼓风恒温箱时，风扇不转了怎么办？</span>
+                        <span class="icon-plus">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>风扇不转会导致箱内温度不均匀。首先检查电源是否正常，然后检查风扇保险丝是否烧断。如果是机械故障，建议联系厂家维修，切勿自行拆卸电路板。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>如何选择合适的容积？</span>
+                        <span class="icon-plus">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>容积应根据样品总量决定。一般建议样品体积占箱内有效容积的1/3到1/2为宜。留出空间有利于空气对流，保证温度均匀。如果空间太小，温度波动会很大，影响实验结果。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>实验设备指南</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">
+                        专注为科研机构、实验室及工业用户提供专业的电热恒温箱及相关实验设备的资讯与选型服务。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#products">产品系列</a></li>
+                        <li><a href="#guide">选购指南</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务支持</h4>
+                    <ul>
+                        <li><a href="#">售后服务政策</a></li>
+                        <li><a href="#">安装调试指南</a></li>
+                        <li><a href="#">配件购买</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：support@lab-equip.com</li>
+                        <li>地址：科技园区创新大道88号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 实验设备指南 版权所有 | 本页面仅供展示与参考</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
