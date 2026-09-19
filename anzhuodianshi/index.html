@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="安卓电视体感游戏专题页：提供安卓电视体感游戏推荐、操作指南、硬件选购建议及热门游戏合集，帮助用户在电视大屏上享受流畅的体感娱乐体验。">
+    <meta name="keywords" content="安卓电视体感游戏, 电视游戏, 智能电视游戏, 体感设备, Android TV 游戏">
+    <title>安卓电视体感游戏-大屏互动娱乐与硬件选购指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #00d2ff;
+            --secondary-color: #3a7bd5;
+            --accent-color: #ff4b1f;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-btn {
+            padding: 8px 20px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 80px 0;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(58, 123, 213, 0.2) 0%, rgba(15, 23, 42, 0) 70%);
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-sub);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .tag {
+            padding: 6px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50px;
+            font-size: 14px;
+            color: var(--text-sub);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-visual {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .game-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 210, 255, 0.15);
+            border-color: var(--primary-color);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #2d3748;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-sub);
+            margin-bottom: 15px;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--primary-color);
+        }
+
+        /* Hardware Section */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 40px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 20px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            color: var(--text-sub);
+            margin-top: 5px;
+        }
+
+        .hardware-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .hw-item {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .hw-item:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .hw-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .hw-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .hw-desc {
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        /* Guide Section */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .guide-content h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+
+        .step-list {
+            counter-reset: step;
+        }
+
+        .step-item {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 30px;
+        }
+
+        .step-item::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .step-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .step-text {
+            font-size: 15px;
+            color: var(--text-sub);
+        }
+
+        .sidebar {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 12px;
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-list li {
+            margin-bottom: 15px;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--text-main);
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .faq-a {
+            font-size: 14px;
+            color: var(--text-sub);
+            display: none;
+            padding-top: 5px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+            margin-top: 5px;
+            padding-top: 10px;
+        }
+
+        .faq-list li.active .faq-a {
+            display: block;
+        }
+
+        .faq-list li.active .faq-q::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b1120;
+            padding: 60px 0 30px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-sub);
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .nav-links {
+                display: none;
+            }
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">TVGAMER</div>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#games">游戏推荐</a>
+                <a href="#hardware">硬件选购</a>
+                <a href="#guide">使用指南</a>
+            </nav>
+            <a href="#guide" class="nav-btn">开始体验</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>让客厅变身<br><span>沉浸式游戏厅</span></h1>
+                <p>探索安卓电视体感游戏的世界，无需繁琐配置，连接体感设备即可在4K大屏上享受运动乐趣。从健身运动到竞技对战，适合全家人的互动娱乐方案。</p>
+                
+                <div class="hero-tags">
+                    <span class="tag">健身运动</span>
+                    <span class="tag">双人竞技</span>
+                    <span class="tag">亲子互动</span>
+                    <span class="tag">复古街机</span>
+                </div>
+
+                <div class="hero-visual">
+                    <article class="game-card">
+                        <img src="https://picsum.photos/seed/game1/400/250" alt="体感健身游戏示例" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">动感拳击</h3>
+                            <p class="card-desc">高精度体感捕捉，模拟真实打击感，跟随教练进行全身燃脂训练。</p>
+                            <div class="card-meta">
+                                <span>运动健身</span>
+                                <span>★★★★☆</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="game-card">
+                        <img src="https://picsum.photos/seed/game2/400/250" alt="体感舞蹈游戏示例" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">光子舞池</h3>
+                            <p class="card-desc">流行歌曲同步节奏，炫酷特效跟随动作，客厅也能开演唱会。</p>
+                            <div class="card-meta">
+                                <span>音乐舞蹈</span>
+                                <span>★★★★★</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="game-card">
+                        <img src="https://picsum.photos/seed/game3/400/250" alt="体感赛车游戏示例" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">极速漂移</h3>
+                            <p class="card-desc">利用摄像头或手柄模拟方向盘，体验最真实的街机赛车快感。</p>
+                            <div class="card-meta">
+                                <span>竞速赛车</span>
+                                <span>★★★★☆</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hardware Section -->
+        <section id="hardware" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">必备硬件配置</h2>
+                        <p class="section-subtitle">想要获得流畅的体感体验，这些设备是关键</p>
+                    </div>
+                </div>
+
+                <div class="hardware-grid">
+                    <div class="hw-item">
+                        <div class="hw-icon">📺</div>
+                        <h3 class="hw-name">智能电视</h3>
+                        <p class="hw-desc">支持Android TV系统的4K电视，拥有较好的摄像头硬件和处理器性能，是运行体感应用的基础。</p>
+                    </div>
+                    <div class="hw-item">
+                        <div class="hw-icon">🎮</div>
+                        <h3 class="hw-name">体感手柄</h3>
+                        <p class="hw-desc">如蓝牙手柄或专用体感控制器，提供精准的按键反馈和动作捕捉辅助，提升游戏操控体验。</p>
+                    </div>
+                    <div class="hw-item">
+                        <div class="hw-icon">🧊</div>
+                        <h3 class="hw-name">高速路由器</h3>
+                        <p class="hw-desc">体感游戏对网络延迟敏感，建议使用5GHz频段的无线路由器，确保数据传输稳定低延迟。</p>
+                    </div>
+                    <div class="hw-item">
+                        <div class="hw-icon">🔦</div>
+                        <h3 class="hw-name">充足光线</h3>
+                        <p class="hw-desc">使用摄像头捕捉动作时，请保持室内光线充足且均匀，避免身体被过度遮挡。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">新手入门指南</h2>
+                        <p class="section-subtitle">从零开始，打造您的家庭游戏中心</p>
+                    </div>
+                </div>
+
+                <div class="guide-grid">
+                    <div class="guide-content">
+                        <h3>安装与设置流程</h3>
+                        <div class="step-list">
+                            <div class="step-item">
+                                <h4 class="step-title">确认电视系统</h4>
+                                <p class="step-text">检查电视是否安装了Google Play商店或第三方应用市场（如当贝市场、沙发管家）。确保网络连接正常。</p>
+                            </div>
+                            <div class="step-item">
+                                <h4 class="step-title">下载体感应用</h4>
+                                <p class="step-text">在应用商店搜索“体感游戏”或“VR游戏”关键词。推荐下载如《VR健身环》、《暴走街机》等支持体感的APP。</p>
+                            </div>
+                            <div class="step-item">
+                                <h4 class="step-title">连接外部设备</h4>
+                                <p class="step-text">连接蓝牙手柄（如Xbox手柄）或体感传感器。部分游戏支持摄像头动作捕捉，请按指引允许摄像头权限。</p>
+                            </div>
+                            <div class="step-item">
+                                <h4 class="step-title">校准与试玩</h4>
+                                <p class="step-text">进入游戏设置进行灵敏度校准。建议先从简单的健身游戏或双人合作游戏开始，熟悉体感操作。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="sidebar">
+                        <h3>常见问题 (FAQ)</h3>
+                        <ul class="faq-list">
+                            <li class="active">
+                                <div class="faq-q">安卓电视体感游戏需要VR头显吗？</div>
+                                <div class="faq-a">不一定。许多体感游戏是全屏显示，通过摄像头或手柄在电视画面中识别动作，不需要佩戴VR眼镜。</div>
+                            </li>
+                            <li>
+                                <div class="faq-q">动作识别不灵敏怎么办？</div>
+                                <div class="faq-a">请确保室内光线充足，身体不要遮挡摄像头，并尝试在游戏设置中提高动作灵敏度阈值。</div>
+                            </li>
+                            <li>
+                                <div class="faq-q">有哪些适合双人的安卓体感游戏？</div>
+                                <div class="faq-a">推荐《超级马里奥派对》（部分支持体感）、《舞力全开》、《拳击大乱斗》等多人同屏游戏。</div>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trending Section -->
+        <section id="games" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">热门游戏分类</h2>
+                        <p class="section-subtitle">根据您的喜好，发现更多精彩内容</p>
+                    </div>
+                    <a href="#" style="color: var(--primary-color); font-size: 14px;">查看全部 &rarr;</a>
+                </div>
+
+                <div class="hardware-grid">
+                    <article class="game-card">
+                        <img src="https://picsum.photos/seed/run/400/250" alt="跑酷类游戏" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">跑酷挑战</h3>
+                            <p class="card-desc">在客厅跑动躲避障碍，通过移动脚步控制角色跳跃和闪避。</p>
+                            <div class="card-meta">
+                                <span>动作</span>
+                                <span>热度 98%</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="game-card">
+                        <img src="https://picsum.photos/seed/pingpong/400/250" alt="乒乓球游戏" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">客厅乒乓</h3>
+                            <p class="card-desc">模拟真实球拍挥动，通过体感捕捉击球角度和力度。</p>
+                            <div class="card-meta">
+                                <span>体育竞技</span>
+                                <span>热度 95%</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="game-card">
+                        <img src="https://picsum.photos/seed/karate/400/250" alt="格斗游戏" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">街头格斗</h3>
+                            <p class="card-desc">拳拳到肉的打击感，利用身体动作模拟出招和防御。</p>
+                            <div class="card-meta">
+                                <span>格斗</span>
+                                <span>热度 92%</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="game-card">
+                        <img src="https://picsum.photos/seed/fitness/400/250" alt="瑜伽健身" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">云端瑜伽</h3>
+                            <p class="card-desc">专业瑜伽教练实时指导，通过摄像头纠正您的姿势。</p>
+                            <div class="card-meta">
+                                <span>健康</span>
+                                <span>热度 89%</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 15px;">TVGAMER</div>
+                    <p style="color: var(--text-sub); font-size: 14px;">
+                        致力于为国内用户提供最新、最全的安卓电视体感游戏资源与硬件评测，让大屏娱乐触手可及。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">游戏推荐</a></li>
+                        <li><a href="#">硬件评测</a></li>
+                        <li><a href="#">使用教程</a></li>
+                        <li><a href="#">玩家社区</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>支持与帮助</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">免责声明</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 安卓电视体感游戏指南. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-list li');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-q');
+                question.addEventListener('click', () => {
+                    // Close others
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth Scroll for Navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
