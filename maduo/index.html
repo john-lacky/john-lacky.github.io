@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玛多-果洛藏族自治州黄河源头门户与生态旅游指南</title>
+    <meta name="description" content="玛多旅游指南，提供玛多县地理位置、黄河源头景区、阿尼玛卿雪山、扎陵湖与鄂陵湖旅游攻略、交通指南及高原生态旅游注意事项。">
+    <meta name="keywords" content="玛多,黄河源头,阿尼玛卿雪山,扎陵湖,鄂陵湖,果洛,青海旅游,高原旅游">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c5f2d; /* 青藏高原植被绿 */
+            --secondary-color: #d4a017; /* 黄河金 */
+            --accent-color: #1a3c6e; /* 湖水蓝 */
+            --bg-color: #f8f9fa;
+            --text-main: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cta-button:hover {
+            background-color: #1e4220;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://picsum.photos/seed/maodu_hero/1920/1080.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+            padding: 10px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 10px auto 0;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        /* Attractions Grid */
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            height: 200px;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            background-color: rgba(44, 95, 45, 0.1);
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            width: fit-content;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .card-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Info Section */
+        .info-section {
+            background-color: var(--white);
+        }
+
+        .info-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .info-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .info-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .info-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .info-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .info-list li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            color: var(--text-main);
+        }
+
+        .info-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* Travel Guide */
+        .guide-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 20px;
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            box-shadow: var(--card-shadow);
+        }
+
+        .step-number {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* Tips Section */
+        .tips-section {
+            background-color: #eef4ef;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .tip-box {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .tip-box:hover {
+            transform: scale(1.02);
+        }
+
+        .tip-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .tip-title {
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .tip-text {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .step-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">玛<span>多门户</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#intro" class="active">概况</a></li>
+                    <li><a href="#attractions">景点</a></li>
+                    <li><a href="#guide">攻略</a></li>
+                    <li><a href="#tips">贴士</a></li>
+                </ul>
+            </nav>
+            <a href="#guide" class="cta-button">开始旅行</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>探寻中华水塔源头</h1>
+                <p>玛多县，位于青海省果洛藏族自治州北部，是长江、黄河、澜沧江的发源地。这里是“千湖之县”，拥有壮丽的自然风光与深厚的藏传佛教文化。</p>
+                <div class="hero-buttons">
+                    <a href="#attractions" class="cta-button">浏览热门景点</a>
+                    <a href="#guide" class="btn-outline">查看旅游攻略</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="intro" class="info-section">
+            <div class="container info-container">
+                <div class="info-image">
+                    <img src="https://picsum.photos/seed/maodu_intro/600/400.jpg" alt="玛多县风光">
+                </div>
+                <div class="info-content">
+                    <h2>认识玛多</h2>
+                    <p style="margin-bottom: 20px; color: var(--text-light);">玛多县平均海拔4300米以上，是青海省海拔最高的县。虽然高寒缺氧，但这里有着令人震撼的高原湿地生态系统和清澈见底的湖泊。</p>
+                    <ul class="info-list">
+                        <li><strong>地理位置：</strong> 青海省果洛藏族自治州北部，青甘川三省交界处。</li>
+                        <li><strong>荣誉称号：</strong> “黄河源头第一县”、“千湖之县”。</li>
+                        <li><strong>气候特征：</strong> 高原大陆性气候，寒冷干燥，日照时间长。</li>
+                        <li><strong>特色文化：</strong> 藏族文化浓厚，是格萨尔王传说的重要流传地之一。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attractions Section -->
+        <section id="attractions">
+            <div class="container">
+                <div class="section-header">
+                    <h2>必游景点推荐</h2>
+                    <p>玛多拥有众多自然景观，每一处都彰显着高原的纯净与壮美。</p>
+                </div>
+                <div class="attractions-grid">
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/zhaling/400/300.jpg" alt="扎陵湖">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-tag">黄河源头</span>
+                            <h3 class="card-title">扎陵湖</h3>
+                            <p class="card-desc">黄河上游第一大型湖泊，湖面东西长，南北窄，形如展翅的巨鹏。湖心偏南有座小岛，是鸟类的天堂。</p>
+                            <a href="#" class="card-link">查看详情 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/eling/400/300.jpg" alt="鄂陵湖">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-tag">黄河源头</span>
+                            <h3 class="card-title">鄂陵湖</h3>
+                            <p class="card-desc">黄河上游第二大湖泊，湖面略大于扎陵湖。湖水湛蓝，传说格萨尔王曾在此迎娶王妃，充满神话色彩。</p>
+                            <a href="#" class="card-link">查看详情 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/annimaqin/400/300.jpg" alt="阿尼玛卿雪山">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-tag">神山圣湖</span>
+                            <h3 class="card-title">阿尼玛卿雪山</h3>
+                            <p class="card-desc">藏传佛教四大神山之一，被称为“斯巴夺布”，是黄河流域最大的雪山，终年积雪，云雾缭绕。</p>
+                            <a href="#" class="card-link">查看详情 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/maodu_lake/400/300.jpg" alt="星星海">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-tag">自然奇观</span>
+                            <h3 class="card-title">星星海</h3>
+                            <p class="card-desc">由众多大小不一的高原湖泊组成，在阳光的照射下波光粼粼，宛如散落在草原上的珍珠，景色梦幻。</p>
+                            <a href="#" class="card-link">查看详情 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Guide Section -->
+        <section id="guide" class="info-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>旅游攻略指南</h2>
+                    <p>规划您的玛多之旅，了解交通方式与行程安排。</p>
+                </div>
+                <div class="guide-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h3>交通方式</h3>
+                            <p style="color: var(--text-light);">目前前往玛多主要依靠自驾或包车。从西宁出发，沿G0612西宁-马尔康高速行驶，经同仁、花石峡至玛多，全程约500公里，路况良好，但需注意高原行车安全。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h3>最佳游览时间</h3>
+                            <p style="color: var(--text-light);">每年5月至10月是玛多旅游的最佳季节。此时气候相对温和，草原碧绿，湖泊水量丰沛，是观赏黄河源头风光的黄金时期。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h3>住宿建议</h3>
+                            <p style="color: var(--text-light);">玛多县城内有宾馆和招待所，条件相对基础但能满足基本住宿需求。建议提前预订，并准备好厚实的保暖衣物。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section id="tips" class="tips-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>高原旅游贴士</h2>
+                    <p>为了确保旅途愉快与安全，请务必阅读以下注意事项。</p>
+                </div>
+                <div class="tips-grid">
+                    <div class="tip-box">
+                        <span class="tip-icon">🩺</span>
+                        <h4 class="tip-title">高原反应预防</h4>
+                        <p class="tip-text">初到玛多海拔极高，建议提前准备红景天等抗高反药物，避免剧烈运动，保证充足睡眠。</p>
+                    </div>
+                    <div class="tip-box">
+                        <span class="tip-icon">🧥</span>
+                        <h4 class="tip-title">保暖防寒</h4>
+                        <p class="tip-text">高原天气多变，昼夜温差极大。即使夏季，也需携带羽绒服、冲锋衣、帽子、手套等御寒装备。</p>
+                    </div>
+                    <div class="tip-box">
+                        <span class="tip-icon">☀️</span>
+                        <h4 class="tip-title">防晒保湿</h4>
+                        <p class="tip-text">紫外线强烈，务必涂抹高倍防晒霜，佩戴墨镜和遮阳帽。空气干燥，需随身携带润唇膏和保湿护肤品。</p>
+                    </div>
+                    <div class="tip-box">
+                        <span class="tip-icon">🚗</span>
+                        <h4 class="tip-title">环保出行</h4>
+                        <p class="tip-text">玛多是生态脆弱区，请勿乱扔垃圾，保护水源地环境，尊重当地藏族同胞的风俗习惯。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>玛多门户</h4>
+                    <p style="font-size: 0.9rem; color: #999;">致力于推广玛多县旅游资源，为游客提供最全面、最实用的旅游信息服务。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#intro">县情概况</a></li>
+                        <li><a href="#attractions">景点介绍</a></li>
+                        <li><a href="#guide">自驾攻略</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>地址：青海省果洛藏族自治州玛多县</li>
+                        <li>邮箱：info@maodu-guide.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 玛多旅游指南网 版权所有. 本站内容仅供参考，具体信息请以当地实际情况为准。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
