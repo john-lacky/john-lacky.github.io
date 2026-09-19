@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="特种部队训练视频 - 深度解析全球顶尖特种部队实战训练与战术教学，包含丛林生存、极限体能、心理素质及武器使用指南。">
+    <meta name="keywords" content="特种部队训练视频,特战训练,军事训练,战术教学,特种兵">
+    <title>特种部队训练视频-全球特战精英训练实录与战术解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #d4af37;
+            --accent-color: #c0392b;
+            --bg-color: #f4f4f4;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+            opacity: 1;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/specialforces/1920/1080.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            font-weight: 700;
+            border-radius: 4px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background-color: #e5c048;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: #fff;
+            color: var(--primary-color);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 40px auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary-color);
+        }
+
+        .view-all {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Featured Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .thumbnail-wrapper {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background-color: #000;
+        }
+
+        .thumbnail-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .video-card:hover .thumbnail-wrapper img {
+            opacity: 1;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(0,0,0,0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #fff;
+        }
+
+        .play-icon::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 15px solid #fff;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            margin-left: 4px;
+        }
+
+        .duration {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-category {
+            font-size: 0.75rem;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            color: var(--text-main);
+        }
+
+        .card-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Categories Section */
+        .categories-section {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 60px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .category-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .category-item:hover {
+            border-color: var(--secondary-color);
+            background-color: #fffcf5;
+        }
+
+        .cat-icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: var(--secondary-color);
+        }
+
+        .cat-info h3 {
+            font-size: 1rem;
+            margin-bottom: 2px;
+        }
+
+        .cat-info p {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* Feature / Guide Section */
+        .guide-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .guide-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .guide-content p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .guide-steps {
+            margin-top: 20px;
+        }
+
+        .step-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .step-num {
+            background: var(--primary-color);
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        /* Safety Notice */
+        .safety-banner {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 40px;
+            border-left: 5px solid #ffeeba;
+        }
+
+        .safety-banner h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-light);
+            background-color: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 200px;
+            border-top: 1px solid #eee;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .header-inner { padding: 0 15px; }
+            nav ul { display: none; } /* Simplified for demo */
+            .mobile-menu-btn { display: block; }
+            .guide-section { grid-template-columns: 1fr; }
+            .section-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <span>◆</span> 特战视界
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#featured">精选训练</a></li>
+                    <li><a href="#categories">分类</a></li>
+                    <li><a href="#guide">战术指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>特种部队训练视频</h1>
+                <p>探索全球顶尖特种部队的实战训练实录。从极限体能挑战到复杂地形战术，深度解析特战精英的养成之路。</p>
+                <div>
+                    <a href="#featured" class="btn">开始观看</a>
+                    <a href="#guide" class="btn btn-outline">了解特战</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Safety Notice -->
+            <div class="safety-banner">
+                <h3>⚠️ 安全提示</h3>
+                <p>本站提供的训练视频仅供军事爱好者学习战术原理与体能训练参考。请勿在非专业指导下尝试任何高危险性动作或使用真实武器。特战训练极其危险，需在专业教官指导下进行。</p>
+            </div>
+
+            <!-- Featured Videos -->
+            <section id="featured">
+                <div class="section-header">
+                    <h2 class="section-title">精选训练实录</h2>
+                    <a href="#" class="view-all">查看全部 &rarr;</a>
+                </div>
+                <div class="video-grid">
+                    <!-- Video 1 -->
+                    <article class="video-card">
+                        <div class="thumbnail-wrapper">
+                            <img src="https://picsum.photos/seed/tactical1/640/360.jpg" alt="丛林生存训练">
+                            <div class="play-icon"></div>
+                            <span class="duration">12:45</span>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">野外生存</span>
+                            <h3 class="card-title">丛林特种部队生存指南：水源寻找与陷阱制作</h3>
+                            <div class="card-meta">
+                                <span>2.3万次观看</span>
+                                <span>3天前</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video 2 -->
+                    <article class="video-card">
+                        <div class="thumbnail-wrapper">
+                            <img src="https://picsum.photos/seed/tactical2/640/360.jpg" alt="夜间渗透训练">
+                            <div class="play-icon"></div>
+                            <span class="duration">08:30</span>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">夜间作战</span>
+                            <h3 class="card-title">夜间渗透与静默移动：特种兵视觉训练解析</h3>
+                            <div class="card-meta">
+                                <span>1.8万次观看</span>
+                                <span>5天前</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video 3 -->
+                    <article class="video-card">
+                        <div class="thumbnail-wrapper">
+                            <img src="https://picsum.photos/seed/tactical3/640/360.jpg" alt="心理素质训练">
+                            <div class="play-icon"></div>
+                            <span class="duration">15:20</span>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">心理素质</span>
+                            <h3 class="card-title">极限心理压力测试：特种兵意志力强化课程</h3>
+                            <div class="card-meta">
+                                <span>3.1万次观看</span>
+                                <span>1周前</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video 4 -->
+                    <article class="video-card">
+                        <div class="thumbnail-wrapper">
+                            <img src="https://picsum.photos/seed/tactical4/640/360.jpg" alt="短突击训练">
+                            <div class="play-icon"></div>
+                            <span class="duration">06:15</span>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">室内突入</span>
+                            <h3 class="card-title">CQB室内近距离战斗：破门突入战术演示</h3>
+                            <div class="card-meta">
+                                <span>4.5万次观看</span>
+                                <span>2周前</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video 5 -->
+                    <article class="video-card">
+                        <div class="thumbnail-wrapper">
+                            <img src="https://picsum.photos/seed/tactical5/640/360.jpg" alt="武器使用">
+                            <div class="play-icon"></div>
+                            <span class="duration">20:10</span>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">武器操作</span>
+                            <h3 class="card-title">战术手枪快速换弹与战术修正技巧</h3>
+                            <div class="card-meta">
+                                <span>5.2万次观看</span>
+                                <span>3周前</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video 6 -->
+                    <article class="video-card">
+                        <div class="thumbnail-wrapper">
+                            <img src="https://picsum.photos/seed/tactical6/640/360.jpg" alt="海豹突击队">
+                            <div class="play-icon"></div>
+                            <span class="duration">18:00</span>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">全球特战</span>
+                            <h3 class="card-title">海豹突击队BUD/S基础水下爆破训练回顾</h3>
+                            <div class="card-meta">
+                                <span>10万+次观看</span>
+                                <span>1月前</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Categories -->
+            <section id="categories">
+                <div class="categories-section">
+                    <div class="section-header" style="margin-bottom: 20px;">
+                        <h2 class="section-title">训练分类</h2>
+                    </div>
+                    <div class="category-grid">
+                        <div class="category-item">
+                            <div class="cat-icon">🌲</div>
+                            <div class="cat-info">
+                                <h3>野外生存</h3>
+                                <p>荒野求生与庇护所搭建</p>
+                            </div>
+                        </div>
+                        <div class="category-item">
+                            <div class="cat-icon">🌙</div>
+                            <div class="cat-info">
+                                <h3>夜间战术</h3>
+                                <p>微光环境下的作战技巧</p>
+                            </div>
+                        </div>
+                        <div class="category-item">
+                            <div class="cat-icon">🧠</div>
+                            <div class="cat-info">
+                                <h3>心理抗压</h3>
+                                <p>高压环境下的决策训练</p>
+                            </div>
+                        </div>
+                        <div class="category-item">
+                            <div class="cat-icon">🚀</div>
+                            <div class="cat-info">
+                                <h3>体能极限</h3>
+                                <p>高强度耐力与爆发力</p>
+                            </div>
+                        </div>
+                        <div class="category-item">
+                            <div class="cat-icon">🔫</div>
+                            <div class="cat-info">
+                                <h3>武器操作</h3>
+                                <p>轻武器与战术装备使用</p>
+                            </div>
+                        </div>
+                        <div class="category-item">
+                            <div class="cat-icon">🤝</div>
+                            <div class="cat-info">
+                                <h3>团队协作</h3>
+                                <p>小组战术配合与沟通</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Guide Section -->
+            <section id="guide">
+                <div class="section-header">
+                    <h2 class="section-title">特战训练入门指南</h2>
+                </div>
+                <div class="guide-section">
+                    <div class="guide-content">
+                        <h2>如何开始特战风格训练？</h2>
+                        <p>观看特种部队训练视频不仅仅是娱乐，更是一种学习科学训练方法和战术思维的过程。特战训练强调体能、技能与意志力的三位一体。</p>
+                        <p>对于普通爱好者而言，不建议直接模仿高强度实战对抗。建议从基础体能和战术基础动作入手，循序渐进。</p>
+                        
+                        <div class="guide-steps">
+                            <div class="step-item">
+                                <div class="step-num">1</div>
+                                <div>
+                                    <h4>建立体能基础</h4>
+                                    <p>核心力量、有氧耐力与上肢爆发力是特战训练的基石。参考视频中关于体能循环的训练模式。</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">2</div>
+                                <div>
+                                    <h4>学习战术基础</h4>
+                                    <p>学习如何利用掩体、低姿匍匐以及团队队形变换。这些视频展示了战术动作的规范执行。</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">3</div>
+                                <div>
+                                    <h4>培养心理素质</h4>
+                                    <p>通过模拟高压力环境训练，提高在混乱局势下的冷静判断力和执行力。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-image">
+                        <img src="https://picsum.photos/seed/guide/600/400.jpg" alt="特战训练示意图" style="width: 100%; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题 (FAQ)</h2>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-item">
+                        <div class="faq-question">观看这些视频需要特殊装备吗？</div>
+                        <div class="faq-answer">
+                            <p>基础战术动作和体能训练不需要特殊装备，舒适的运动服即可。但涉及武器操作或攀爬训练时，请务必佩戴护具（如护膝、护肘）并确保环境安全。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">这些训练内容适合初学者吗？</div>
+                        <div class="faq-answer">
+                            <p>视频中的部分高强度内容适合有一定运动基础的爱好者。初学者应从简单的体能训练和基础战术概念开始，切勿盲目模仿高难度动作。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">特种部队的训练和普通健身有什么区别？</div>
+                        <div class="faq-answer">
+                            <p>特种部队训练更注重功能性、复合动作以及对抗性，旨在应对复杂战场环境。普通健身通常更侧重于特定肌群的孤立训练或健美塑形。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>特战视界</h4>
+                <p>致力于为军事爱好者提供最专业的特种部队训练视频解析与战术科普。</p>
+            </div>
+            <div class="footer-col">
+                <h4>栏目导航</h4>
+                <ul>
+                    <li><a href="#">最新更新</a></li>
+                    <li><a href="#">热门榜单</a></li>
+                    <li><a href="#">战术装备</a></li>
+                    <li><a href="#">军事百科</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">网站简介</a></li>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">免责声明</a></li>
+                    <li><a href="#">联系合作</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 特战视界. 保留所有权利. 本站内容仅供学习交流，请勿用于非法用途。</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Mobile Menu Toggle (Basic)
+        document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
+            const nav = document.querySelector('nav ul');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '70px';
+                nav.style.left = '0';
+                nav.style.width = '100%';
+                nav.style.background = '#1a1a1a';
+                nav.style.padding = '20px';
+                nav.style.zIndex = '999';
+            }
+        });
+    </script>
+</body>
+  </html>
