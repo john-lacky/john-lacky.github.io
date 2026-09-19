@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="麻衣的日常 - 关注日常生活美学与治愈系穿搭指南，分享极简主义生活方式、家居灵感及心理健康小贴士。">
+    <meta name="keywords" content="麻衣的日常, 治愈系, 极简生活, 日常穿搭, 家居美学, 心灵治愈">
+    <title>麻衣的日常 - 治愈系生活方式与穿搭指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8E9AAF;
+            --secondary-color: #5D6D7E;
+            --accent-color: #D4A373;
+            --bg-color: #F9F9F9;
+            --card-bg: #FFFFFF;
+            --text-main: #2C3E50;
+            --text-light: #7F8C8D;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-actions button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .header-actions button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: rgba(142, 154, 175, 0.1);
+            color: var(--primary-color);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            height: 350px;
+            background-color: #e0e0e0;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+            margin-top: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .hero-image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .hero-image-placeholder:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 4rem var(--spacing-unit);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--text-main);
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 24px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .view-all {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Grid System */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .card-image {
+            height: 200px;
+            background-color: #eee;
+            position: relative;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: var(--text-main);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Featured Section */
+        .featured-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .featured-card {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            height: 400px;
+        }
+
+        .featured-image {
+            height: 100%;
+        }
+        
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-info {
+            background-color: var(--card-bg);
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-info h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .featured-info p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        /* Sidebar & List */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .widget {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+            color: var(--text-main);
+        }
+
+        .mini-list li {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .mini-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .mini-list a {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .mini-list span {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem var(--spacing-unit);
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .quote-section blockquote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.5rem;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .quote-section cite {
+            font-size: 1rem;
+            opacity: 0.8;
+            font-style: normal;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2C3E50;
+            color: #ecf0f1;
+            padding: 4rem var(--spacing-unit) 2rem;
+        }
+
+        .footer-grid {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col a {
+            color: #bdc3c7;
+            font-size: 0.95rem;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .grid-3, .grid-2, .featured-layout, .featured-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-card {
+                height: auto;
+            }
+
+            .featured-image {
+                height: 250px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+            }
+
+            nav ul {
+                margin: 1rem 0;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .header-actions button {
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">麻衣的<span>日常</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">生活美学</a></li>
+                    <li><a href="#">穿搭灵感</a></li>
+                    <li><a href="#">家居改造</a></li>
+                    <li><a href="#">读书笔记</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button>订阅更新</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>在琐碎中<br>找回生活的秩序感</h1>
+                <p>分享关于极简主义、治愈系生活以及自我成长的思考与实践。让每一天都充满仪式感。</p>
+                <div class="hero-tags">
+                    <span class="tag">#极简主义</span>
+                    <span class="tag">#治愈系</span>
+                    <span class="tag">#日常穿搭</span>
+                    <span class="tag">#慢生活</span>
+                </div>
+                <div class="hero-image-placeholder">
+                    <img src="https://picsum.photos/seed/mayi_hero/1200/400" alt="麻衣的日常 - 治愈系生活场景">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Article -->
+        <section class="container">
+            <div class="featured-layout">
+                <article class="card featured-card">
+                    <div class="featured-image">
+                        <img src="https://picsum.photos/seed/mayi_feature/800/600" alt="如何打造治愈系书桌">
+                    </div>
+                    <div class="featured-info">
+                        <span class="card-badge">精选专题</span>
+                        <h2>打造属于你的治愈系书桌：从收纳到氛围</h2>
+                        <p>一个整洁、温馨的工作空间能极大提升工作效率与心情。本文分享5个低成本打造高颜值书桌的实用技巧，包括桌面布局、照明选择以及桌面摆件的搭配美学。</p>
+                        <a href="#" class="view-all">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Latest Posts Grid -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">最新内容</h2>
+                <a href="#" class="view-all">查看更多</a>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-badge">穿搭</span>
+                        <img src="https://picsum.photos/seed/mayi_outfit/400/300" alt="春日温柔穿搭">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span>2023-10-24</span>
+                            <span>阅读 1.2k</span>
+                        </div>
+                        <h3 class="card-title"><a href="#">春日温柔穿搭：这几件单品承包你的整个季节</a></h3>
+                        <p class="card-excerpt">告别沉闷，用浅色系和柔软材质开启明媚的春天。推荐几款经典的春日衣橱单品。</p>
+                        <div class="card-footer">
+                            <span>&rarr; 阅读更多</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-badge">家居</span>
+                        <img src="https://picsum.photos/seed/mayi_home/400/300" alt="北欧风家居">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span>2023-10-22</span>
+                            <span>阅读 856</span>
+                        </div>
+                        <h3 class="card-title"><a href="#">北欧风家居改造：小户型也能拥有大空间感</a></h3>
+                        <p class="card-excerpt">通过合理的色彩搭配和镜面运用，让狭小的居住空间瞬间通透。实用的收纳解决方案。</p>
+                        <div class="card-footer">
+                            <span>&rarr; 阅读更多</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-badge">生活</span>
+                        <img src="https://picsum.photos/seed/mayi_coffee/400/300" alt="手冲咖啡教程">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span>2023-10-20</span>
+                            <span>阅读 2.1k</span>
+                        </div>
+                        <h3 class="card-title"><a href="#">周末慢生活：在家手冲一杯咖啡的仪式感</a></h3>
+                        <p class="card-excerpt">不需要昂贵的设备，只需掌握几个关键点，在家也能享受到咖啡馆级别的手冲咖啡。</p>
+                        <div class="card-footer">
+                            <span>&rarr; 阅读更多</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="quote-section">
+            <blockquote>
+                "生活不是为了赶路，而是为了感受路。"
+            </blockquote>
+            <cite>— 麻衣的日常</cite>
+        </section>
+
+        <!-- Layout with Sidebar -->
+        <section class="container">
+            <div class="featured-layout">
+                <div class="main-content">
+                    <div class="section-header">
+                        <h2 class="section-title">深度阅读</h2>
+                    </div>
+                    <div class="grid-2">
+                        <article class="card">
+                            <div class="card-image">
+                                <span class="card-badge">书籍</span>
+                                <img src="https://picsum.photos/seed/mayi_book/600/400" alt="书籍推荐">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title"><a href="#">本月书单：关于自我成长与内心平静</a></h3>
+                                <p class="card-excerpt">在这个快节奏的时代，我们需要停下来阅读。精选3本能让你静下心来的好书。</p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-image">
+                                <span class="card-badge">摄影</span>
+                                <img src="https://picsum.photos/seed/mayi_photo/600/400" alt="摄影技巧">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title"><a href="#">手机摄影技巧：如何拍出有氛围感的照片</a></h3>
+                                <p class="card-excerpt">不需要专业相机，利用手机自带的功能和构图法则，记录生活中的美好瞬间。</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="widget">
+                        <h3 class="widget-title">热门标签</h3>
+                        <div class="hero-tags" style="justify-content: flex-start;">
+                            <span class="tag">#极简</span>
+                            <span class="tag">#好物推荐</span>
+                            <span class="tag">#独居生活</span>
+                            <span class="tag">#心情随笔</span>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <h3 class="widget-title">近期更新</h3>
+                        <ul class="mini-list">
+                            <li>
+                                <a href="#">如何布置一个舒适的卧室角落？</a>
+                                <span>3天前</span>
+                            </li>
+                            <li>
+                                <a href="#">我的极简衣橱整理心得</a>
+                                <span>1周前</span>
+                            </li>
+                            <li>
+                                <a href="#">适合独居女生的安全小贴士</a>
+                                <span>2周前</span>
+                            </li>
+                            <li>
+                                <a href="#">周末去哪里寻找自然风光？</a>
+                                <span>3周前</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="widget">
+                        <h3 class="widget-title">关于我</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">
+                            这里是麻衣的日常，一个记录生活点滴、分享穿搭与家居灵感的小小角落。希望我的分享能给你带来一丝温暖和力量。
+                        </p>
+                        <a href="#" class="view-all">了解更多 &rarr;</a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">常见问题</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid var(--accent-color);">
+                    <h4 style="margin-bottom: 0.5rem;">如何开始极简生活？</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-light);">建议从整理一个房间或一个抽屉开始，只保留当下真正需要和喜欢的东西，逐步减少物品数量，减少选择困难。</p>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid var(--accent-color);">
+                    <h4 style="margin-bottom: 0.5rem;">独居生活需要注意什么？</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-light);">除了基本的居家安全（如检查门窗、购买防滑垫）外，更重要的是保持规律的作息和健康的饮食习惯，避免孤独感侵蚀生活。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>麻衣的日常</h3>
+                <p style="color: #bdc3c7; font-size: 0.9rem; line-height: 1.8;">
+                    在这个喧嚣的世界里，寻找一片属于自己的宁静角落。分享生活美学，记录美好瞬间。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>探索</h3>
+                <ul>
+                    <li><a href="#">生活美学</a></li>
+                    <li><a href="#">穿搭灵感</a></li>
+                    <li><a href="#">家居改造</a></li>
+                    <li><a href="#">好物清单</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>关于</h3>
+                <ul>
+                    <li><a href="#">关于作者</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">友情链接</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>订阅</h3>
+                <p style="color: #bdc3c7; font-size: 0.9rem; margin-bottom: 1rem;">获取最新的生活灵感与穿搭指南。</p>
+                <div style="display: flex;">
+                    <input type="email" placeholder="您的邮箱" style="padding: 0.5rem; border: none; border-radius: 4px 0 0 4px; flex-grow: 1; outline: none;">
+                    <button style="padding: 0.5rem 1rem; background-color: var(--accent-color); border: none; color: white; border-radius: 0 4px 4px 0; cursor: pointer;">订阅</button>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 麻衣的日常. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+  </html>
