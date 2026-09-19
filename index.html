@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="乘公交投千元现金最新资讯、处理流程、注意事项及公交失物招领指南，帮助乘客安全找回遗失财物。">
+    <meta name="keywords" content="乘公交投千元现金,公交失物招领,公交车遗失现金,公交公司失物管理">
+    <title>乘公交投千元现金-公交失物招领与财物处理全指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f0f4f8;
+            --accent-color: #ff9800;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: #f9fafb;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #003d80 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 1rem;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        /* Card Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .card-text {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            width: fit-content;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: var(--border-radius);
+            text-align: center;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            background-color: #004494;
+        }
+
+        /* Flow Section */
+        .flow-container {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .flow-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 2rem;
+        }
+
+        .flow-steps::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #e0e0e0;
+            z-index: 0;
+        }
+
+        .step {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 0 auto 1rem;
+        }
+
+        .step h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Contact Section */
+        .contact-box {
+            background-color: var(--secondary-color);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a202c;
+            color: #a0aec0;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #2d3748;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .flow-steps {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .flow-steps::before {
+                display: none;
+            }
+
+            .step {
+                display: flex;
+                align-items: flex-start;
+                text-align: left;
+                gap: 1rem;
+            }
+
+            .step-icon {
+                margin: 0;
+                flex-shrink: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            公交服务指南
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#guide" class="active">处理流程</a></li>
+                <li><a href="#faq">常见问题</a></li>
+                <li><a href="#contact">失物招领</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>乘公交投千元现金怎么办？</h1>
+        <p>发现不慎遗失千元现金在公交车上？请立即按照以下步骤操作，通过正规渠道联系公交公司，最大程度提高找回几率。</p>
+    </div>
+</section>
+
+<main class="container">
+    
+    <!-- 处理流程 -->
+    <section id="guide">
+        <h2 class="section-title">标准处理流程</h2>
+        <div class="flow-container">
+            <div class="flow-steps">
+                <div class="step">
+                    <div class="step-icon">1</div>
+                    <h3>保留现场证据</h3>
+                    <p>切勿在车厢内大声喧哗或翻找他人座位，避免造成误会。记下车牌号、线路及大概上车时间。</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">2</div>
+                    <h3>拨打服务热线</h3>
+                    <p>立即拨打当地公交集团24小时服务热线（如：12345或当地公交投诉电话），提供详细描述。</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">3</div>
+                    <h3>前往失物招领处</h3>
+                    <p>根据指引前往最近的公交枢纽站失物招领中心，或通过官方线上平台进行登记。</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">4</div>
+                    <h3>配合核实与领取</h3>
+                    <p>提供遗失物品的特征描述、支付凭证或监控录像片段，确认无误后领取现金。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关键建议 -->
+    <section id="tips">
+        <h2 class="section-title">紧急处理建议</h2>
+        <div class="grid">
+            <article class="card">
+                <div class="card-body">
+                    <span class="card-tag">时效性</span>
+                    <h3 class="card-title">越早联系越好</h3>
+                    <p class="card-text">公交车每到一个终点站都会进行例行清扫。现金通常会被司机或保洁员暂时保管。超过24小时未认领，现金可能会被上交公司财务部门，查找难度增加。</p>
+                    <a href="#contact" class="btn">查找热线</a>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-body">
+                    <span class="card-tag">凭证保留</span>
+                    <h3 class="card-title">保留支付记录</h3>
+                    <p class="card-text">建议保留公交卡充值记录、微信/支付宝转账凭证或出租车/网约车订单。在前往领取时，这些记录是证明“丢失现金金额”的最有力证据。</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-body">
+                    <span class="card-tag">防骗指南</span>
+                    <h3 class="card-title">警惕冒领者</h3>
+                    <p class="card-text">切勿在网络上随意发布包含具体金额的寻物启事，以免招致不法分子冒领。应通过官方渠道或熟人圈子低调寻找。</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- 常见问题 FAQ -->
+    <section id="faq">
+        <h2 class="section-title">常见问题解答</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">如果在公交车发车后发现丢失现金，是否还能找回？</div>
+                <div class="faq-answer">
+                    <p>可以尝试找回。请立即联系公交公司调度中心，说明情况。司机通常会在发车前或到达终点站后进行清点。如果司机已清点并上交，您可以凭有效证明前往失物招领处领取。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">现金丢失后，公交公司是否有赔偿义务？</div>
+                <div class="faq-answer">
+                    <p>公交公司作为公共运输服务提供方，有义务协助乘客查找遗失物品。但根据相关规定，对于非公司管理或过失导致的遗失（如乘客自身保管不善），公司通常不承担直接赔偿责任，主要提供协助服务。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何查询公交车的监控录像？</div>
+                <div class="faq-answer">
+                    <p>监控录像通常保存一定期限（如3-7天）。您需要携带身份证件，向公交公司安保部门提出调取申请，说明具体的时间段和线路，经审批后方可查看。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如果在投币箱发现千元现金，应该怎么做？</div>
+                <div class="faq-answer">
+                    <p>如果是投币箱内的现金，通常由司机在停站或收车时清点。发现金额不对时，司机应立即向公司汇报。作为乘客，您应立即拨打服务热线，告知具体线路和时间，请求司机注意核对。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系与指引 -->
+    <section id="contact">
+        <div class="contact-box">
+            <h2 style="margin-bottom: 1rem; color: var(--text-main);">需要立即帮助？</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-light);">请拨打当地公交集团官方服务热线，或前往最近的枢纽站失物招领中心。</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="tel:12345" class="btn" style="background-color: var(--accent-color);">拨打市民服务热线 12345</a>
+                <a href="#" class="btn" style="background-color: white; color: var(--primary-color); border: 1px solid var(--primary-color);">查找官方失物招领平台</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于本站</h4>
+                <p style="font-size: 0.9rem; line-height: 1.8;">本站致力于为市民提供便捷的公交出行及失物处理指南，帮助大家解决“乘公交投千元现金”等突发状况。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">公交线路查询</a></li>
+                    <li><a href="#">实时到站</a></li>
+                    <li><a href="#">失物招领中心</a></li>
+                    <li><a href="#">服务监督</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>温馨提示</h4>
+                <ul>
+                    <li><a href="#">乘车安全须知</a></li>
+                    <li><a href="#">防止诈骗指南</a></li>
+                    <li><a href="#">遗失物品处理流程</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 公交出行服务指南. All Rights Reserved. 仅供信息参考，不作为法律依据。</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // FAQ 交互逻辑
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // 关闭其他已打开的项
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // 切换当前项
+                item.classList.toggle('active');
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
