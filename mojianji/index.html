@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="魔剑姬 - 深度解析与资源导航平台。提供魔剑姬角色图鉴、技能攻略、装备搭配、同人创作分享及社区互动指南。">
+    <meta name="keywords" content="魔剑姬, 魔剑姬攻略, 魔剑姬图鉴, 魔剑姬同人, 魔剑姬下载">
+    <title>魔剑姬-角色图鉴、技能攻略与同人创作分享平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6a0dad;
+            --secondary-color: #9d4edd;
+            --accent-color: #ff0055;
+            --bg-dark: #0f0c29;
+            --bg-card: #1a1a2e;
+            --text-main: #ffffff;
+            --text-muted: #b8b8d1;
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: rgba(26, 26, 46, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(to right, #d53369, #daae51);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            color: var(--text-muted);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--text-main);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: white;
+            outline: none;
+            width: 150px;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://picsum.photos/seed/magic_sword/1920/600') no-repeat center center/cover;
+            opacity: 0.4;
+            filter: blur(3px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border-radius: 30px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(106, 13, 173, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(106, 13, 173, 0.6);
+        }
+
+        /* 通用 Section */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 20px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* 角色图鉴 Grid */
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--secondary-color);
+        }
+
+        .card-img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .card-tags span {
+            display: inline-block;
+            font-size: 12px;
+            padding: 4px 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+        /* 攻略列表 */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .guide-item {
+            display: flex;
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .guide-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .guide-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .guide-content h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .guide-content p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* 同人专区 */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            padding-bottom: 133%; /* 3:4 Aspect Ratio */
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #0b0b16;
+            padding: 40px 0;
+            margin-top: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .hero {
+                height: 400px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            nav {
+                display: none; /* Mobile menu simplified for single file */
+            }
+            .search-box {
+                display: none;
+            }
+            .guide-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .guide-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">魔剑姬</div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#characters">角色图鉴</a></li>
+                    <li><a href="#guides">进阶攻略</a></li>
+                    <li><a href="#gallery">同人创作</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索角色或装备...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <h1>探索魔剑姬的奇幻世界</h1>
+                <p>汇集最全的角色设定、战斗技巧解析与同人艺术创作。在这里，每一位魔剑姬都拥有独特的灵魂与故事。</p>
+                <a href="#characters" class="btn">开始探索</a>
+            </div>
+        </section>
+
+        <!-- Character Gallery Section -->
+        <section id="characters">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">角色图鉴</h2>
+                    <a href="#" style="color: var(--accent-color);">查看全部 &rarr;</a>
+                </div>
+                <div class="character-grid">
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/c1/400/500" alt="暗夜女皇" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">暗夜女皇</h3>
+                            <p class="card-desc">拥有操控影子的能力，擅长隐秘刺杀与群体控制，是队伍中的核心输出。</p>
+                            <div class="card-tags">
+                                <span>控制</span>
+                                <span>暗影</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/c2/400/500" alt="烈焰骑士" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">烈焰骑士</h3>
+                            <p class="card-desc">身披重甲，挥舞附魔巨剑，以绝对的防御和爆发伤害著称的坦克角色。</p>
+                            <div class="card-tags">
+                                <span>坦克</span>
+                                <span>火焰</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 3 -->
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/c3/400/500" alt="冰霜精灵" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">冰霜精灵</h3>
+                            <p class="card-desc">来自极寒之地的守护者，能够冻结敌人行动，为队友提供护盾。</p>
+                            <div class="card-tags">
+                                <span>辅助</span>
+                                <span>冰系</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 4 -->
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/c4/400/500" alt="雷霆使者" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">雷霆使者</h3>
+                            <p class="card-desc">速度极快，技能带有麻痹效果，适合快速切入战场击杀关键目标。</p>
+                            <div class="card-tags">
+                                <span>刺客</span>
+                                <span>雷电</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guides Section -->
+        <section id="guides" style="background-color: rgba(0,0,0,0.2);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">进阶攻略</h2>
+                </div>
+                <div class="guide-list">
+                    <article class="guide-item">
+                        <div class="guide-icon">⚔️</div>
+                        <div class="guide-content">
+                            <h3>新手入门：如何选择你的第一把魔剑</h3>
+                            <p>新手玩家往往在初始魔剑的选择上犹豫不决。本文将详细解析不同属性魔剑对角色成长的影响，以及初始选择建议。</p>
+                        </div>
+                    </article>
+                    <article class="guide-item">
+                        <div class="guide-icon">🛡️</div>
+                        <div class="guide-content">
+                            <h3>装备搭配指南：打造最强防御流</h3>
+                            <p>针对不同类型的魔剑姬角色，我们整理了最高效的装备词条组合与附魔方案，助你轻松通关高难度副本。</p>
+                        </div>
+                    </article>
+                    <article class="guide-item">
+                        <div class="guide-icon">🔥</div>
+                        <div class="guide-content">
+                            <h3>技能连招教学：输出最大化解析</h3>
+                            <p>掌握关键技能的释放时机与连招顺序，是提升战斗效率的关键。本攻略包含实战录像分析与连招演示。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">同人创作</h2>
+                    <a href="#" style="color: var(--accent-color);">投稿作品 &rarr;</a>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/art1/400/600" alt="同人画作1">
+                        <div class="gallery-overlay">梦境之森</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/art2/400/600" alt="同人画作2">
+                        <div class="gallery-overlay">决战前夕</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/art3/400/600" alt="同人画作3">
+                        <div class="gallery-overlay">静谧时刻</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/art4/400/600" alt="同人画作4">
+                        <div class="gallery-overlay">魔剑觉醒</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于魔剑姬</h4>
+                    <p style="color: var(--text-muted); font-size: 14px;">
+                        本站致力于为魔剑姬爱好者提供最全面的角色资料、攻略分享与同人交流平台。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">角色列表</a></li>
+                        <li><a href="#">装备数据库</a></li>
+                        <li><a href="#">活动日历</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>社区规则</h4>
+                    <ul>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">举报反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 魔剑姬爱好者社区 版权所有. 本站内容仅供学习交流使用.
+            </div>
+        </div>
+    </footer>
+
+</body>
+                          </html>
