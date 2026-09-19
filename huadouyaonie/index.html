@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="花都妖孽小说在线阅读平台，提供都市修真、异能争霸等热门小说章节更新、排行榜单及阅读推荐。">
+    <meta name="keywords" content="花都妖孽,小说阅读,都市修真,网络小说,在线小说">
+    <title>花都妖孽-都市异能小说阅读与章节更新</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e60012;
+            --primary-hover: #b3000f;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --border-color: #e1e4e8;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .search-bar {
+            display: flex;
+            background: #f0f0f0;
+            border-radius: 20px;
+            padding: 4px 12px;
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 4px;
+            width: 200px;
+        }
+
+        .search-bar button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            padding: 60px 0;
+            margin-bottom: 30px;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            margin-bottom: 16px;
+            color: #2d3436;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #636e72;
+            margin-bottom: 24px;
+            max-width: 600px;
+        }
+
+        .hero-tags span {
+            display: inline-block;
+            background: rgba(255,255,255,0.8);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-right: 8px;
+        }
+
+        .hero-book {
+            flex: 0 0 280px;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-book::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--primary-color);
+        }
+
+        .book-cover {
+            width: 100%;
+            height: 320px;
+            background-color: #eee;
+            margin-bottom: 16px;
+            object-fit: cover;
+        }
+
+        .book-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .book-author {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .book-meta {
+            font-size: 12px;
+            color: var(--text-light);
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .btn-read {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .btn-read:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Main Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        /* Sidebar */
+        aside {
+            position: sticky;
+            top: 80px;
+            height: fit-content;
+        }
+
+        .sidebar-section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .sidebar-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bg-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .category-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 12px;
+            border-radius: 4px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .category-list a:hover, .category-list a.active {
+            background-color: #fff0f0;
+            color: var(--primary-color);
+        }
+
+        .rank-list .rank-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+            align-items: center;
+        }
+
+        .rank-num {
+            width: 20px;
+            height: 20px;
+            background: #eee;
+            color: #999;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .rank-item:nth-child(1) .rank-num { background: #ff4757; color: white; }
+        .rank-item:nth-child(2) .rank-num { background: #ffa502; color: white; }
+        .rank-item:nth-child(3) .rank-num { background: #2ed573; color: white; }
+
+        .rank-info h4 {
+            font-size: 14px;
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 140px;
+        }
+
+        .rank-info p {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* Content Area */
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .content-header h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .section-tabs {
+            display: flex;
+            gap: 8px;
+        }
+
+        .tab-btn {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            background: #e9ecef;
+            color: var(--text-secondary);
+        }
+
+        .tab-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .book-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 16px;
+            display: flex;
+            gap: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .book-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+        }
+
+        .book-card-img {
+            width: 100px;
+            height: 140px;
+            border-radius: 4px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .book-card-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .book-card-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .book-card-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .book-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .book-tags span {
+            font-size: 12px;
+            color: #888;
+            margin-right: 8px;
+        }
+
+        .update-time {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3436;
+            color: #b2bec3;
+            padding: 40px 0 20px;
+            margin-top: 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #636e72;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 10px 0;
+            }
+            
+            .nav-links {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .search-bar {
+                order: 2;
+                margin-left: auto;
+            }
+
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            aside {
+                position: static;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .hero-tags {
+                justify-content: center;
+            }
+
+            .book-card {
+                flex-direction: column;
+            }
+
+            .book-card-img {
+                width: 100%;
+                height: 200px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                <span>花都妖孽</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">分类</a>
+                <a href="#">排行榜</a>
+                <a href="#">书架</a>
+                <a href="#">我的</a>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索小说、作者...">
+                <button type="button">搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>花都妖孽</h1>
+                    <p>都市隐世高手下山入世，在繁华都市中演绎一段段惊心动魄的传奇故事。看他是如何凭借绝世武功与过人智慧，玩转花都，纵横天下。</p>
+                    <div class="hero-tags">
+                        <span>都市修真</span>
+                        <span>异能高手</span>
+                        <span>热血爽文</span>
+                        <span>连载中</span>
+                    </div>
+                </div>
+                <div class="hero-book">
+                    <img src="https://picsum.photos/seed/flower/280/320" alt="花都妖孽封面" class="book-cover">
+                    <h2 class="book-title">花都妖孽</h2>
+                    <p class="book-author">作者：未知大神</p>
+                    <div class="book-meta">
+                        <span>字数: 120万</span>
+                        <span>状态: 连载中</span>
+                    </div>
+                    <a href="#" class="btn-read">立即阅读</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container main-layout">
+            <!-- Sidebar -->
+            <aside>
+                <div class="sidebar-section">
+                    <div class="sidebar-title">小说分类</div>
+                    <ul class="category-list">
+                        <li><a href="#" class="active">都市异能 <span>(128)</span></a></li>
+                        <li><a href="#">修真仙侠 <span>(85)</span></a></li>
+                        <li><a href="#">历史军事 <span>(64)</span></a></li>
+                        <li><a href="#">科幻末世 <span>(42)</span></a></li>
+                        <li><a href="#">悬疑推理 <span>(36)</span></a></li>
+                        <li><a href="#">游戏竞技 <span>(29)</span></a></li>
+                        <li><a href="#">青春校园 <span>(15)</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title">热门榜单 <a href="#" style="font-size:12px;color:var(--primary-color)">更多 ></a></div>
+                    <ul class="rank-list">
+                        <li class="rank-item">
+                            <div class="rank-num">1</div>
+                            <div class="rank-info">
+                                <h4>极品透视眼</h4>
+                                <p>昨天更新 12章</p>
+                            </div>
+                        </li>
+                        <li class="rank-item">
+                            <div class="rank-num">2</div>
+                            <div class="rank-info">
+                                <h4>绝世神医</h4>
+                                <p>昨天更新 10章</p>
+                            </div>
+                        </li>
+                        <li class="rank-item">
+                            <div class="rank-num">3</div>
+                            <div class="rank-info">
+                                <h4>最强赘婿</h4>
+                                <p>昨天更新 08章</p>
+                            </div>
+                        </li>
+                        <li class="rank-item">
+                            <div class="rank-num">4</div>
+                            <div class="rank-info">
+                                <h4>都市龙帅</h4>
+                                <p>昨天更新 15章</p>
+                            </div>
+                        </li>
+                        <li class="rank-item">
+                            <div class="rank-num">5</div>
+                            <div class="rank-info">
+                                <h4>鬼瞳</h4>
+                                <p>昨天更新 06章</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title">推荐作者</div>
+                    <ul class="category-list">
+                        <li><a href="#">风流书呆</a></li>
+                        <li><a href="#">庚不让</a></li>
+                        <li><a href="#">静夜思</a></li>
+                        <li><a href="#">宅猪</a></li>
+                        <li><a href="#">烽火戏诸侯</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Content Area -->
+            <section class="content-area">
+                <div class="content-header">
+                    <h2>热门推荐</h2>
+                    <div class="section-tabs">
+                        <div class="tab-btn active">日榜</div>
+                        <div class="tab-btn">周榜</div>
+                        <div class="tab-btn">总榜</div>
+                    </div>
+                </div>
+
+                <article class="book-card">
+                    <img src="https://picsum.photos/seed/novel1/100/140" alt="小说封面" class="book-card-img">
+                    <div class="book-card-info">
+                        <div>
+                            <h3 class="book-card-title">花都妖孽</h3>
+                            <p class="book-card-desc">隐世高人下山入世，为了报恩留在繁华都市。本以为只是平静的生活，却因一次意外卷入豪门恩怨与地下势力的争斗。看他如何利用绝世医术与武功，玩转花都，成为一代妖孽传说。</p>
+                            <div class="book-tags">
+                                <span>都市</span>
+                                <span>修真</span>
+                                <span>爽文</span>
+                            </div>
+                        </div>
+                        <div class="book-card-footer">
+                            <span class="update-time">最新章节：第1245章 神秘的邀请</span>
+                            <a href="#" class="btn-read" style="padding: 4px 12px; font-size: 12px;">阅读</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="book-card">
+                    <img src="https://picsum.photos/seed/novel2/100/140" alt="小说封面" class="book-card-img">
+                    <div class="book-card-info">
+                        <div>
+                            <h3 class="book-card-title">狂龙战神</h3>
+                            <p class="book-card-desc">前世他是令人闻风丧胆的兵王，今生他是豪门里的落魄赘婿。当尊严被践踏，当亲人受威胁，他不再是那个唯唯诺诺的男人。狂龙觉醒，龙啸九天，谁敢挡我？</p>
+                            <div class="book-tags">
+                                <span>赘婿</span>
+                                <span>逆袭</span>
+                                <span>热血</span>
+                            </div>
+                        </div>
+                        <div class="book-card-footer">
+                            <span class="update-time">最新章节：第892章 暴风雨前夕</span>
+                            <a href="#" class="btn-read" style="padding: 4px 12px; font-size: 12px;">阅读</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="book-card">
+                    <img src="https://picsum.photos/seed/novel3/100/140" alt="小说封面" class="book-card-img">
+                    <div class="book-card-info">
+                        <div>
+                            <h3 class="book-card-title">全能神医</h3>
+                            <p class="book-card-desc">医学世家传人，因家族内斗流落在外。他拥有上古传承的医术，不仅能妙手回春，还能驱邪避凶。在都市中，他治病救人，惩恶扬善，谱写了一段医道传奇。</p>
+                            <div class="book-tags">
+                                <span>医术</span>
+                                <span>都市</span>
+                                <span>悬疑</span>
+                            </div>
+                        </div>
+                        <div class="book-card-footer">
+                            <span class="update-time">最新章节：第2100章 绝世传承</span>
+                            <a href="#" class="btn-read" style="padding: 4px 12px; font-size: 12px;">阅读</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="book-card">
+                    <img src="https://picsum.photos/seed/novel4/100/140" alt="小说封面" class="book-card-img">
+                    <div class="book-card-info">
+                        <div>
+                            <h3 class="book-card-title">超级兵王</h3>
+                            <p class="book-card-desc">特种兵王回归都市，本想过平静生活，却因一次任务被迫卷入更大的漩涡。面对金钱与美色的诱惑，面对敌人的步步紧逼，他如何抉择？是继续潜伏，还是彻底爆发？</p>
+                            <div class="book-tags">
+                                <span>兵王</span>
+                                <span>特工</span>
+                                <span>军事</span>
+                            </div>
+                        </div>
+                        <div class="book-card-footer">
+                            <span class="update-time">最新章节：第567章 绝地反击</span>
+                            <a href="#" class="btn-read" style="padding: 4px 12px; font-size: 12px;">阅读</a>
+                        </div>
+                    </div>
+                </article>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="tab-btn" style="background: white; color: var(--text-main);">加载更多</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">版权声明</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">用户注册</a></li>
+                        <li><a href="#">阅读指南</a></li>
+                        <li><a href="#">充值中心</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">都市异能</a></li>
+                        <li><a href="#">玄幻修真</a></li>
+                        <li><a href="#">历史架空</a></li>
+                        <li><a href="#">科幻未来</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">QQ群：123456789</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 花都妖孽小说阅读网 版权所有. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+          </html>
